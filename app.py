@@ -30,7 +30,7 @@ st.markdown("""
 
 # --- VARIÁVEIS GLOBAIS ---
 LINK_CHECKOUT = "https://pay.kiwify.com.br/tR0h1UK" 
-MODELO_IA = "gemini-1.5-flash" # Mantido o 1.5 para segurança no deploy
+MODELO_IA = "gemini-2.5-flash"
 
 # --- ESTADO ---
 if 'historico' not in st.session_state: st.session_state['historico'] = []
@@ -194,3 +194,4 @@ if st.session_state['ultimo_resultado']:
         c1, c2 = st.columns([2, 1])
         with c1: st.warning("🔒 Teste Finalizado.")
         with c2: st.link_button("Desbloquear (R$ 29,90)", LINK_CHECKOUT, type="primary")
+
