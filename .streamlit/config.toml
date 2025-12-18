@@ -1,0 +1,15 @@
+[theme]
+# Cor principal (Botões, Seletores)
+primaryColor = "#005EB8" 
+
+# Cor do Fundo Geral
+backgroundColor = "#0e161dff"
+
+# Cor do Fundo da Barra Lateral e Caixas
+secondaryBackgroundColor = "#060e16ff"
+
+# Cor do Texto
+textColor = "#dbdbdbff"
+
+# Fonte (sans serif é mais moderna)
+font = "sans serif"
