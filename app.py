@@ -280,7 +280,7 @@ else:
             for post in historico:
                 # Usa o título do banco ou um fallback se estiver vazio
                 label = post.get('title') or f"Post {post['id']}"
-                if st.button(f"📄 {label}", key=f"hist_{post['id']}"):
+                if st.button(f" {label}", key=f"hist_{post['id']}"):
                     st.session_state['view_mode'] = 'ver'
                     st.session_state['post_visualizado'] = post
                     st.rerun()
@@ -373,3 +373,4 @@ else:
     if st.session_state.get('popup_ativo'):
         mostrar_popup_venda()
         st.session_state['popup_ativo'] = False
+
