@@ -84,7 +84,7 @@ def create_user(email, password):
     try:
         existing = supabase.table("users").select("*").eq("email", email).execute()
         if len(existing.data) > 0: return "exists"
-        new_user = {"email": email, "password": password_hash, "credits": 3, "is_vip": False}
+        new_user = {"email": email, "password": password_hash, "credits": 1, "is_vip": False}
         data = supabase.table("users").insert(new_user).execute()
         return data.data[0]
     except: return None
@@ -373,4 +373,5 @@ else:
     if st.session_state.get('popup_ativo'):
         mostrar_popup_venda()
         st.session_state['popup_ativo'] = False
+
 
